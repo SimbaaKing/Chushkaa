@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Chushkaa.Data
 {
-    public enum RoleType { User, Admin }
+   
     public class User
     {
         public int Id { get; set; }
@@ -13,7 +13,7 @@ namespace Chushkaa.Data
         public string Password { get; set; }
         public string  FullName { get; set; }
         public string Email { get; set; }
-        public RoleType Role { get; set; }
+        public Roles Role { get; set; }
         public virtual ICollection<Order> Orders { get; set; }
     }
 }

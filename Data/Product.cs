@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chushkaa.Data
 {
-    public enum TypeType { Food , Domestic, Health, Cosmetic, Other}
+    
     public class Product
     {
         public int Id{ get; set; }
@@ -14,7 +14,7 @@ namespace Chushkaa.Data
         [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
         public string Description { get; set; }
-        public TypeType Type{ get; set; }
+        public TypeFood Type{ get; set; }
         public virtual ICollection<Order> Orders { get; set; }
 
     }
